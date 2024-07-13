@@ -1,30 +1,35 @@
-<mat-card>
-    <mat-card-title>Filters</mat-card-title>
+<div class="filter-container">
     <mat-form-field>
-        <mat-select placeholder="Movie Name" [(ngModel)]="selectedMovie">
-            <mat-option *ngFor="let movie of movies" [value]="movie.url">{{ movie.title }}</mat-option>
+        <mat-label>Movie</mat-label>
+        <mat-select [(ngModel)]="selectedMovie">
+            <mat-option *ngFor="let movie of movies" [value]="movie.title">{{ movie.title }}</mat-option>
         </mat-select>
     </mat-form-field>
     <mat-form-field>
-        <mat-select placeholder="Species" [(ngModel)]="selectedSpecies">
-            <mat-option *ngFor="let species of speciesList" [value]="species.url">{{ species.name }}</mat-option>
+        <mat-label>Species</mat-label>
+        <mat-select [(ngModel)]="selectedSpecies">
+            <mat-option *ngFor="let species of speciesList" [value]="species.name">{{ species.name }}</mat-option>
         </mat-select>
     </mat-form-field>
     <mat-form-field>
-        <mat-select placeholder="Vehicle" [(ngModel)]="selectedVehicle">
-            <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.url">{{ vehicle.name }}</mat-option>
+        <mat-label>Starship</mat-label>
+        <mat-select [(ngModel)]="selectedStarship">
+            <mat-option *ngFor="let starship of starships" [value]="starship.name">{{ starship.name }}</mat-option>
         </mat-select>
     </mat-form-field>
     <mat-form-field>
-        <mat-select placeholder="Star Ships" [(ngModel)]="selectedStarship">
-            <mat-option *ngFor="let starship of starships" [value]="starship.url">{{ starship.name }}</mat-option>
+        <mat-label>Vehicle</mat-label>
+        <mat-select [(ngModel)]="selectedVehicle">
+            <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.name">{{ vehicle.name }}</mat-option>
         </mat-select>
     </mat-form-field>
     <mat-form-field>
-        <input matInput placeholder="Birth Year From" [(ngModel)]="birthYearFrom">
+        <mat-label>Birth Year From</mat-label>
+        <input matInput [(ngModel)]="birthYearFrom" placeholder="e.g., 10BBY">
     </mat-form-field>
     <mat-form-field>
-        <input matInput placeholder="Birth Year To" [(ngModel)]="birthYearTo">
+        <mat-label>Birth Year To</mat-label>
+        <input matInput [(ngModel)]="birthYearTo" placeholder="e.g., 5ABY">
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="applyFilter()">Search</button>
-</mat-card>
+    <button mat-raised-button (click)="applyFilter()">Search</button>
+</div>

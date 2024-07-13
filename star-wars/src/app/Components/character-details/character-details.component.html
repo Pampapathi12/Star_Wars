@@ -1,9 +1,20 @@
-<mat-card *ngIf="character">
-    <mat-card-title>{{ character.name }}</mat-card-title>
-    <mat-card-content>
-      <div>Species: {{ character.species }}</div>
-      <div>Movies: {{ character.movies.join(', ') }}</div>
-      <div>Spaceships: {{ character.spaceships.join(', ') }}</div>
-    </mat-card-content>
-  </mat-card>
+<div class="character-card">
+    <div class="character-image">
+      <mat-icon>person</mat-icon>
+    </div>
+    <div class="character-details">
+      <div class="detail-item">
+        <span>Name:</span> {{character?.name}}
+      </div>
+      <div class="detail-item">
+        <span>Species:</span> {{character?.species}}
+      </div>
+      <div class="detail-item">
+        <span>Movies:</span> <ng-container *ngFor="let movie of character?.movies">{{ movie }}, </ng-container>
+      </div>
+      <div class="detail-item">
+        <span>Starships:</span> <ng-container *ngFor="let starship of character?.spaceships">{{ starship }}, </ng-container>
+      </div>
+    </div>
+  </div>
   

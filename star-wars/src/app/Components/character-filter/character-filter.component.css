@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-form-field {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    align-self: flex-end;
+    background-color: #388E3C;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #2e7d32;
+  }
+  
