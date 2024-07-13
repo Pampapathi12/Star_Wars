@@ -1,1 +1,25 @@
-<p>character-list works!</p>
+<mat-card>
+    <mat-card-title>Search Results</mat-card-title>
+    <mat-table [dataSource]="filteredCharacters" class="mat-elevation-z8">
+      <ng-container matColumnDef="position">
+        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Character Name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="species">
+        <mat-header-cell *matHeaderCellDef> Species </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.species}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="birthYear">
+        <mat-header-cell *matHeaderCellDef> Birth Year </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.birthYear}} </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectCharacter(row)"></mat-row>
+    </mat-table>
+    <mat-paginator [length]="totalCharacters" [pageSize]="5"></mat-paginator>
+  </mat-card>
+  

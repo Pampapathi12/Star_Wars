@@ -1,1 +1,9 @@
-<p>character-details works!</p>
+<mat-card *ngIf="character">
+    <mat-card-title>{{ character.name }}</mat-card-title>
+    <mat-card-content>
+      <div>Species: {{ character.species }}</div>
+      <div>Movies: {{ character.movies.join(', ') }}</div>
+      <div>Spaceships: {{ character.spaceships.join(', ') }}</div>
+    </mat-card-content>
+  </mat-card>
+  

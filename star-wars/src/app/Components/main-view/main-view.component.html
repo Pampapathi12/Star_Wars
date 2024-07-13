@@ -1,1 +1,11 @@
-<p>main-view works!</p>
+<mat-toolbar color="primary">STAR WARS</mat-toolbar>
+<div fxLayout="row" fxLayoutGap="10px">
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+      <app-character-filter></app-character-filter>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-character-list></app-character-list>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

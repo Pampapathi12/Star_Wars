@@ -1,1 +1,30 @@
-<p>character-filter works!</p>
+<mat-card>
+    <mat-card-title>Filters</mat-card-title>
+    <mat-form-field>
+        <mat-select placeholder="Movie Name" [(ngModel)]="selectedMovie">
+            <mat-option *ngFor="let movie of movies" [value]="movie.url">{{ movie.title }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Species" [(ngModel)]="selectedSpecies">
+            <mat-option *ngFor="let species of speciesList" [value]="species.url">{{ species.name }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Vehicle" [(ngModel)]="selectedVehicle">
+            <mat-option *ngFor="let vehicle of vehicles" [value]="vehicle.url">{{ vehicle.name }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Star Ships" [(ngModel)]="selectedStarship">
+            <mat-option *ngFor="let starship of starships" [value]="starship.url">{{ starship.name }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Birth Year From" [(ngModel)]="birthYearFrom">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Birth Year To" [(ngModel)]="birthYearTo">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="applyFilter()">Search</button>
+</mat-card>
