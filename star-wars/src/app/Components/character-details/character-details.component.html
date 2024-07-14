@@ -1,4 +1,4 @@
-<mat-card *ngIf="character">
+<!-- <mat-card *ngIf="character">
     <mat-card-title>{{ character.name }}</mat-card-title>
     <mat-card-content>
       <div>Species: {{ character.species }}</div>
@@ -6,4 +6,40 @@
       <div>Spaceships: {{ character.spaceships.join(', ') }}</div>
     </mat-card-content>
   </mat-card>
+   -->
+
+
+   <div class="container">
+    <!-- Left side navigation for basic character details -->
+    <mat-sidenav mode="side" opened class="sidenav">
+      <div class="basic-details">
+        <h3>{{ character.name }}</h3>
+        <p>Height: {{ character.height }}</p>
+        <p>Mass: {{ character.mass }}</p>
+        <p>Hair Color: {{ character.hair_color }}</p>
+        <p>Skin Color: {{ character.skin_color }}</p>
+        <p>Eye Color: {{ character.eye_color }}</p>
+        <p>Birth Year: {{ character.birth_year }}</p>
+        <p>Gender: {{ character.gender }}</p>
+      </div>
+    </mat-sidenav>
+  
+    <!-- Right side content for additional details -->
+    <div class="details-content">
+      <h3>Films</h3>
+      <ul>
+        <li *ngFor="let film of filmsDetails">{{ film }}</li>
+      </ul>
+  
+      <h3>Vehicles</h3>
+      <ul>
+        <li *ngFor="let vehicle of vehiclesDetails">{{ vehicle }}</li>
+      </ul>
+  
+      <h3>Starships</h3>
+      <ul>
+        <li *ngFor="let starship of starshipsDetails">{{ starship }}</li>
+      </ul>
+    </div>
+  </div>
   

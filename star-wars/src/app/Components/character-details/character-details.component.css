@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidenav {
+  width: 250px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.details-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Enable scrolling if content exceeds container height */
+}
+
+.details-content h3 {
+  margin-top: 0;
+}
+
+.details-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.details-content ul li {
+  margin-bottom: 10px;
+}
+/* Example styles for character details */
+:host {
+  display: block;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+

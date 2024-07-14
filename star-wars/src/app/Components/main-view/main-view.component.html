@@ -2,10 +2,10 @@
 <div fxLayout="row" fxLayoutGap="10px">
   <mat-sidenav-container class="example-container">
     <mat-sidenav mode="side" opened>
-      <app-character-filter></app-character-filter>
+      <app-character-filter (filterChanged)="onFilterChanged($event)"></app-character-filter>
     </mat-sidenav>
     <mat-sidenav-content>
-      <app-character-list></app-character-list>
+      <app-character-list [filters]="filters"></app-character-list>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
