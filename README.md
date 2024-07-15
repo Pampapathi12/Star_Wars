@@ -10,5 +10,9 @@ Star Wars
 5. its routing to the main compoenent page
 
 
-https://github.com/user-attachments/assets/282d3cbd-73cd-4722-af7a-30c73bae9aa4
+
+
+
+
+https://github.com/user-attachments/assets/5e666fad-0596-46c3-9337-fa880ed48bd5
 
